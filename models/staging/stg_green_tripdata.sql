@@ -1,4 +1,5 @@
 -- Define view table
 {{ config(materialized='table') }}
 
-SELECT *
+SELECT * from {{ source('staging','green_tripdata')}}
+
